@@ -12,21 +12,8 @@ import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
 
 
-public class BookApiTest {
-	
-	public RequestSpecification request;
-	public Response response;
-	public ValidatableResponse json;
-	
-	@Before
-	public void initTest() {
-		RestAssured.baseURI="https://www.googleapis.com";
-		RestAssured.basePath="/books/v1/volumes";
-		//String url= "https://www.googleapis.com/books/v1/volumes";
-		
-	}
+public class BookApiTest extends TestBase {
 
-	
 	
 	@Test
 	public void findBooksbyAPIs() {
