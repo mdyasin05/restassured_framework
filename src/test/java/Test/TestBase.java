@@ -15,6 +15,8 @@ public class TestBase {
 	
 	@Before
 	public void initTest() {
+		RestAssured.baseURI="";
+		RestAssured.basePath="";
 		RestAssured.baseURI="https://www.googleapis.com";
 		RestAssured.basePath="/books/v1/volumes";
 		//String url= "https://www.googleapis.com/books/v1/volumes";
